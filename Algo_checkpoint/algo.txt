@@ -1,0 +1,37 @@
+ALGORITHM read_sentence
+var 
+sentence: string;
+ j, k, word: integer;
+
+
+BEGIN
+j:=0
+k:=0
+word:=0
+
+REPEAT
+
+    j:=j+1
+
+    IF (sentence[j] = ' ') THEN 
+        word:= word+1
+    END_IF
+
+    IF (sentence[j] ='a' or 'A' or 'e' or 'E' or 'i' or 'I' or 'o' or 'O' or 'u' or 'U') THEN
+        k:= k+1
+    END_IF
+
+UNTIL 
+  sentence[j]='.';
+
+Write(j)
+Write(k)
+Write(word)
+
+END
+
+
+
+
+
+
